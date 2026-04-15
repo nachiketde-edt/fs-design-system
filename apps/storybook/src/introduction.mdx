@@ -1,0 +1,77 @@
+import { Meta } from '@storybook/blocks';
+
+<Meta title="FS Design System / Introduction" />
+
+# FS Design System
+
+Welcome to the **FS Design System** developer portal. This is the single source of truth for
+designers and engineers consuming our component library.
+
+## What's inside
+
+| Package | Description |
+|---|---|
+| `@fs-ds/tokens` | Design tokens — colors, spacing, typography, borders, elevation |
+| `@fs-ds/web-components` | Framework-agnostic Web Components built with [Lit](https://lit.dev) |
+| `@fs-ds/react` | React wrappers around the web components |
+| `@fs-ds/angular` | Angular standalone components wrapping the web components |
+
+## Architecture
+
+The system follows a **single-source** strategy:
+
+```
+specs/          ← human-readable Markdown specs (the decision record)
+    └─ tokens/
+    └─ components/
+packages/
+    ├─ tokens/          ← JS/TS + CSS custom properties + SCSS variables
+    ├─ web-components/  ← Lit elements (the canonical implementation)
+    ├─ react/           ← React forwardRef wrappers
+    └─ angular/         ← Angular standalone components + NgModule
+apps/
+    ├─ storybook/       ← This portal
+    ├─ demo-react/      ← Vite + React consumer
+    ├─ demo-angular/    ← Angular consumer
+    └─ demo-html/       ← Plain HTML consumer
+```
+
+## Getting started
+
+### React
+```bash
+npm install @fs-ds/tokens @fs-ds/react
+```
+```tsx
+import '@fs-ds/tokens/css';           // load CSS variables
+import { Button, Input, Badge } from '@fs-ds/react';
+
+<Button variant="primary" onClick={() => {}}>Save</Button>
+```
+
+### Angular
+```bash
+npm install @fs-ds/tokens @fs-ds/angular
+```
+```ts
+// app.module.ts
+import { FsDsModule } from '@fs-ds/angular';
+@NgModule({ imports: [FsDsModule] })
+export class AppModule {}
+```
+```html
+<fs-button-component variant="primary" (buttonClick)="save()">Save</fs-button-component>
+```
+
+### Plain HTML (web components)
+```html
+<link rel="stylesheet" href="node_modules/@fs-ds/tokens/dist/tokens.css" />
+<script type="module" src="node_modules/@fs-ds/web-components/dist/index.js"></script>
+
+<fs-button variant="primary">Save</fs-button>
+```
+
+## Versioning
+
+All four packages are **linked** via Changesets — they always publish together under the same
+version. Use `npm run changeset` in the repo root to create a change entry before merging.

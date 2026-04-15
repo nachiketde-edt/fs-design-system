@@ -1,0 +1,29 @@
+{
+  "name": "@fs-ds/angular",
+  "version": "0.0.1",
+  "description": "FS Design System — Angular wrappers for fs-ds web components",
+  "files": ["dist"],
+  "scripts": {
+    "build": "ng-packagr -p ng-package.json",
+    "dev": "ng-packagr -p ng-package.json --watch",
+    "lint": "eslint src",
+    "test": "jest",
+    "clean": "rm -rf dist"
+  },
+  "peerDependencies": {
+    "@angular/core": ">=17.0.0",
+    "@angular/common": ">=17.0.0",
+    "@fs-ds/tokens": "*",
+    "@fs-ds/web-components": "*"
+  },
+  "devDependencies": {
+    "@angular/core": "^17.3.0",
+    "@angular/common": "^17.3.0",
+    "@angular/compiler": "^17.3.0",
+    "@angular/compiler-cli": "^17.3.0",
+    "@fs-ds/tokens": "*",
+    "@fs-ds/web-components": "*",
+    "ng-packagr": "^17.3.0",
+    "typescript": "*"
+  }
+}

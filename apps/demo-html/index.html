@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FS Design System — HTML Demo</title>
+    <!-- 1. Load design tokens as CSS custom properties -->
+    <link rel="stylesheet" href="/node_modules/@fs-ds/tokens/src/tokens.css" />
+    <style>
+      *, *::before, *::after { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        font-family: var(--fs-font-sans, sans-serif);
+        background: var(--fs-color-neutral-50, #f9fafb);
+        color: var(--fs-color-neutral-900, #111827);
+      }
+
+      .container {
+        max-width: 600px;
+        margin: 48px auto;
+        padding: 0 16px;
+      }
+
+      h1 {
+        font-size: var(--fs-text-2xl, 1.5rem);
+        font-weight: var(--fs-font-weight-bold, 700);
+        margin: 0 0 8px;
+      }
+
+      .subtitle {
+        color: var(--fs-color-neutral-500, #6b7280);
+        margin: 0 0 24px;
+      }
+
+      .badges { display: flex; gap: 8px; margin-bottom: 32px; }
+
+      .form { display: flex; flex-direction: column; gap: 16px; max-width: 360px; }
+      .actions { display: flex; gap: 8px; }
+
+      hr { margin: 40px 0; border-color: var(--fs-color-neutral-200); }
+
+      h2 {
+        font-size: var(--fs-text-lg, 1.125rem);
+        font-weight: var(--fs-font-weight-semibold, 600);
+        margin: 0 0 16px;
+      }
+
+      .button-row { display: flex; gap: 8px; flex-wrap: wrap; }
+
+      /* Token showcase */
+      .token-section { margin-bottom: 32px; }
+      .swatch-grid { display: flex; gap: 8px; flex-wrap: wrap; }
+      .swatch {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+      }
+      .swatch-box {
+        width: 48px;
+        height: 48px;
+        border-radius: var(--fs-radius-md, 6px);
+        border: 1px solid rgba(0,0,0,.08);
+      }
+      .swatch-label { font-size: 11px; font-family: monospace; }
+    </style>
+  </head>
+  <body>
+    <!-- 2. Register web components (side-effect module import) -->
+    <script type="module">
+      import '@fs-ds/web-components';
+    </script>
+
+    <div class="container">
+      <h1>FS Design System</h1>
+      <p class="subtitle">Plain HTML + Web Components demo</p>
+
+      <!-- Badges -->
+      <div class="badges">
+        <fs-badge variant="default">Web Components</fs-badge>
+        <fs-badge variant="info">Lit</fs-badge>
+        <fs-badge variant="success">Zero Framework</fs-badge>
+      </div>
+
+      <!-- Form -->
+      <section>
+        <h2>Form example</h2>
+        <form class="form" id="demo-form">
+          <fs-input
+            label="Email address"
+            type="email"
+            placeholder="you@example.com"
+            id="email-input"
+          ></fs-input>
+          <div class="actions">
+            <fs-button variant="primary" type="submit">Submit</fs-button>
+            <fs-button variant="secondary" type="button" id="clear-btn">Clear</fs-button>
+          </div>
+        </form>
+      </section>
+
+      <hr />
+
+      <!-- Button variants -->
+      <section>
+        <h2>Button variants</h2>
+        <div class="button-row">
+          <fs-button variant="primary">Primary</fs-button>
+          <fs-button variant="secondary">Secondary</fs-button>
+          <fs-button variant="ghost">Ghost</fs-button>
+          <fs-button variant="danger">Danger</fs-button>
+          <fs-button variant="primary" disabled>Disabled</fs-button>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Badge variants -->
+      <section>
+        <h2>Badge variants</h2>
+        <div class="badges">
+          <fs-badge variant="default">Default</fs-badge>
+          <fs-badge variant="success">Success</fs-badge>
+          <fs-badge variant="warning">Warning</fs-badge>
+          <fs-badge variant="error">Error</fs-badge>
+          <fs-badge variant="info">Info</fs-badge>
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Token swatches -->
+      <section>
+        <h2>Brand color tokens</h2>
+        <div class="swatch-grid">
+          <div class="swatch">
+            <div class="swatch-box" style="background:var(--fs-color-brand-50)"></div>
+            <span class="swatch-label">50</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-box" style="background:var(--fs-color-brand-200)"></div>
+            <span class="swatch-label">200</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-box" style="background:var(--fs-color-brand-400)"></div>
+            <span class="swatch-label">400</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-box" style="background:var(--fs-color-brand-500)"></div>
+            <span class="swatch-label">500</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-box" style="background:var(--fs-color-brand-700)"></div>
+            <span class="swatch-label">700</span>
+          </div>
+          <div class="swatch">
+            <div class="swatch-box" style="background:var(--fs-color-brand-900)"></div>
+            <span class="swatch-label">900</span>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <script type="module">
+      const form = document.getElementById('demo-form');
+      const emailInput = document.getElementById('email-input');
+      const clearBtn = document.getElementById('clear-btn');
+
+      form?.addEventListener('submit', e => {
+        e.preventDefault();
+        alert(`Submitted: ${emailInput.value}`);
+      });
+
+      clearBtn?.addEventListener('click', () => {
+        emailInput.value = '';
+      });
+    </script>
+  </body>
+</html>

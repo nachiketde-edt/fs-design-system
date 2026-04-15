@@ -1,0 +1,135 @@
+/**
+ * @fs-ds/tokens — CSS custom properties
+ * Auto-generated from src/  (run `npm run build:css` to regenerate)
+ * Import via: import '@fs-ds/tokens/css'
+ */
+:root {
+  /* ── Colors: Brand ─────────────────────────────────── */
+  --fs-color-brand-50:  #eff6ff;
+  --fs-color-brand-100: #dbeafe;
+  --fs-color-brand-200: #bfdbfe;
+  --fs-color-brand-300: #93c5fd;
+  --fs-color-brand-400: #60a5fa;
+  --fs-color-brand-500: #3b82f6;
+  --fs-color-brand-600: #2563eb;
+  --fs-color-brand-700: #1d4ed8;
+  --fs-color-brand-800: #1e40af;
+  --fs-color-brand-900: #1e3a8a;
+  --fs-color-brand-950: #172554;
+
+  /* ── Colors: Neutral ───────────────────────────────── */
+  --fs-color-neutral-0:    #ffffff;
+  --fs-color-neutral-50:   #f9fafb;
+  --fs-color-neutral-100:  #f3f4f6;
+  --fs-color-neutral-200:  #e5e7eb;
+  --fs-color-neutral-300:  #d1d5db;
+  --fs-color-neutral-400:  #9ca3af;
+  --fs-color-neutral-500:  #6b7280;
+  --fs-color-neutral-600:  #4b5563;
+  --fs-color-neutral-700:  #374151;
+  --fs-color-neutral-800:  #1f2937;
+  --fs-color-neutral-900:  #111827;
+  --fs-color-neutral-950:  #030712;
+  --fs-color-neutral-1000: #000000;
+
+  /* ── Colors: Semantic ──────────────────────────────── */
+  --fs-color-success-light:   #d1fae5;
+  --fs-color-success-default: #10b981;
+  --fs-color-success-dark:    #065f46;
+  --fs-color-warning-light:   #fef3c7;
+  --fs-color-warning-default: #f59e0b;
+  --fs-color-warning-dark:    #92400e;
+  --fs-color-error-light:     #fee2e2;
+  --fs-color-error-default:   #ef4444;
+  --fs-color-error-dark:      #991b1b;
+  --fs-color-info-light:      #dbeafe;
+  --fs-color-info-default:    #3b82f6;
+  --fs-color-info-dark:       #1e40af;
+
+  /* ── Spacing ───────────────────────────────────────── */
+  --fs-spacing-0:  0px;
+  --fs-spacing-1:  4px;
+  --fs-spacing-2:  8px;
+  --fs-spacing-3:  12px;
+  --fs-spacing-4:  16px;
+  --fs-spacing-5:  20px;
+  --fs-spacing-6:  24px;
+  --fs-spacing-7:  28px;
+  --fs-spacing-8:  32px;
+  --fs-spacing-9:  36px;
+  --fs-spacing-10: 40px;
+  --fs-spacing-12: 48px;
+  --fs-spacing-14: 56px;
+  --fs-spacing-16: 64px;
+  --fs-spacing-20: 80px;
+  --fs-spacing-24: 96px;
+  --fs-spacing-32: 128px;
+
+  /* ── Typography: Font families ─────────────────────── */
+  --fs-font-sans:  "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --fs-font-mono:  "JetBrains Mono", ui-monospace, "Courier New", monospace;
+  --fs-font-serif: "Merriweather", ui-serif, Georgia, serif;
+
+  /* ── Typography: Font sizes ────────────────────────── */
+  --fs-text-xs:   0.75rem;
+  --fs-text-sm:   0.875rem;
+  --fs-text-base: 1rem;
+  --fs-text-lg:   1.125rem;
+  --fs-text-xl:   1.25rem;
+  --fs-text-2xl:  1.5rem;
+  --fs-text-3xl:  1.875rem;
+  --fs-text-4xl:  2.25rem;
+  --fs-text-5xl:  3rem;
+
+  /* ── Typography: Font weights ──────────────────────── */
+  --fs-font-weight-regular:  400;
+  --fs-font-weight-medium:   500;
+  --fs-font-weight-semibold: 600;
+  --fs-font-weight-bold:     700;
+
+  /* ── Typography: Line heights ──────────────────────── */
+  --fs-leading-none:    1;
+  --fs-leading-tight:   1.25;
+  --fs-leading-snug:    1.375;
+  --fs-leading-normal:  1.5;
+  --fs-leading-relaxed: 1.625;
+  --fs-leading-loose:   2;
+
+  /* ── Border radius ─────────────────────────────────── */
+  --fs-radius-none: 0px;
+  --fs-radius-sm:   2px;
+  --fs-radius-base: 4px;
+  --fs-radius-md:   6px;
+  --fs-radius-lg:   8px;
+  --fs-radius-xl:   12px;
+  --fs-radius-2xl:  16px;
+  --fs-radius-3xl:  24px;
+  --fs-radius-full: 9999px;
+
+  /* ── Border widths ─────────────────────────────────── */
+  --fs-border-0: 0px;
+  --fs-border-1: 1px;
+  --fs-border-2: 2px;
+  --fs-border-4: 4px;
+
+  /* ── Shadows ───────────────────────────────────────── */
+  --fs-shadow-none: none;
+  --fs-shadow-sm:   0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --fs-shadow-base: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --fs-shadow-md:   0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --fs-shadow-lg:   0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --fs-shadow-xl:   0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --fs-shadow-2xl:  0 25px 50px -12px rgb(0 0 0 / 0.25);
+  --fs-shadow-inner: inset 0 2px 4px 0 rgb(0 0 0 / 0.05);
+
+  /* ── Z-index ───────────────────────────────────────── */
+  --fs-z-base:     0;
+  --fs-z-raised:   10;
+  --fs-z-dropdown: 100;
+  --fs-z-sticky:   200;
+  --fs-z-overlay:  300;
+  --fs-z-modal:    400;
+  --fs-z-popover:  500;
+  --fs-z-toast:    600;
+  --fs-z-tooltip:  700;
+}

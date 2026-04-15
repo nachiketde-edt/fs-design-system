@@ -1,0 +1,40 @@
+// @fs-ds/tokens — SCSS variables (mirrors tokens.css)
+// Import via: @use '@fs-ds/tokens/scss' as tokens;
+
+// Brand
+$fs-color-brand-50:  #eff6ff;
+$fs-color-brand-100: #dbeafe;
+$fs-color-brand-500: #3b82f6;
+$fs-color-brand-600: #2563eb;
+$fs-color-brand-700: #1d4ed8;
+$fs-color-brand-900: #1e3a8a;
+
+// Neutral
+$fs-color-neutral-0:   #ffffff;
+$fs-color-neutral-50:  #f9fafb;
+$fs-color-neutral-100: #f3f4f6;
+$fs-color-neutral-200: #e5e7eb;
+$fs-color-neutral-300: #d1d5db;
+$fs-color-neutral-400: #9ca3af;
+$fs-color-neutral-500: #6b7280;
+$fs-color-neutral-700: #374151;
+$fs-color-neutral-900: #111827;
+
+// Spacing
+$fs-spacing-1: 4px;
+$fs-spacing-2: 8px;
+$fs-spacing-3: 12px;
+$fs-spacing-4: 16px;
+$fs-spacing-6: 24px;
+$fs-spacing-8: 32px;
+
+// Typography
+$fs-font-sans:  "Inter", ui-sans-serif, system-ui, sans-serif;
+$fs-font-mono:  "JetBrains Mono", ui-monospace, monospace;
+
+// Border radius
+$fs-radius-sm:   2px;
+$fs-radius-base: 4px;
+$fs-radius-md:   6px;
+$fs-radius-lg:   8px;
+$fs-radius-full: 9999px;

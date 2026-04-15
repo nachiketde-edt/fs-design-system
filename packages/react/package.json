@@ -1,0 +1,41 @@
+{
+  "name": "@fs-ds/react",
+  "version": "0.0.1",
+  "description": "FS Design System — React wrappers for fs-ds web components",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist"],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --external react --external react-dom --external @fs-ds/web-components --external @fs-ds/tokens --external lit",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --external react --external react-dom --external @fs-ds/web-components --external @fs-ds/tokens --external lit --watch",
+    "lint": "eslint src",
+    "test": "vitest run",
+    "clean": "rm -rf dist"
+  },
+  "dependencies": {
+    "@fs-ds/tokens": "*",
+    "@fs-ds/web-components": "*"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tsup": "^8.0.2",
+    "typescript": "*",
+    "vitest": "^1.6.0"
+  }
+}

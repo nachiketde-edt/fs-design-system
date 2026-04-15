@@ -1,0 +1,12 @@
+// Import FS Design System tokens as CSS custom properties
+@import '@fs-ds/tokens/css';
+
+// Global resets
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--fs-font-sans);
+  background: var(--fs-color-neutral-50);
+  color: var(--fs-color-neutral-900);
+}
